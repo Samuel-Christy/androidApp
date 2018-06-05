@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class ZooMapActivity extends Activity{
 
@@ -18,6 +19,7 @@ public class ZooMapActivity extends Activity{
         super.onCreate(savedInstanceState);
         this.setContentView(new ZooMapActivityView(this)); //lance la vue
         Log.i("onCreate: ", "killRoy was here !");
+        Toast.makeText(this, "kapoué !", Toast.LENGTH_SHORT).show();
     }
 
     public class ZooMapActivityView extends View{
