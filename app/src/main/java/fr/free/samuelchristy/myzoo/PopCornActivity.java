@@ -19,21 +19,23 @@ public class PopCornActivity extends Activity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(new PopCornActivityView(this)); //lance la vue
-        Log.i("zoo: ", "o,Create");
+        Log.i("zoo: ", "onCreate");
 
     }
 
-//    @Override
-//    public boolean onTouchEvent(MotionEvent event) {
-//        //launch aquarium activity
-//        if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
-//            Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
-//            Intent i = new Intent(this, AquariumActivity.class);
-//            startActivity(i);
-//            Log.d("zoo", "touch");
-//        }
-//        return true;
-//    }
+/*
+@Override
+public boolean onTouchEvent(MotionEvent event) {
+//launch aquarium activity
+if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
+Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
+Intent i = new Intent(this, AquariumActivity.class);
+startActivity(i);
+Log.d("zoo", "touch");
+}
+return true;
+}
+*/
 
     public class PopCornActivityView extends View{
 
