@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -14,41 +13,43 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
-public class ZooMapActivity extends Activity{
+public class AquariumActivity extends Activity{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(new ZooMapActivityView(this)); //lance la vue
-        Log.i("zoo: ", "o,Create");
 
+        this.setContentView(new AquariumMapActivityView(this)); //lance la vue
+        Log.i("onCreate: ", "killRoy was here !");
+        Toast.makeText(this, "kapoué 2!", Toast.LENGTH_SHORT).show();
+        Log.d("aquarium","oncreate");
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        //launch aquarium activity
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
-            Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this, AquariumActivity.class);
-            startActivity(i);
-            Log.d("zoo", "touch");
+
+            Log.d("aquarium", "touch");
+            startActivity(new Intent(this, PopCornActivity.class));
         }
         return true;
     }
 
-    public class ZooMapActivityView extends View{
+
+
+    public class AquariumMapActivityView extends View{
 
         Bitmap laCarte;
 
-        public ZooMapActivityView(Context context) {
+        public AquariumMapActivityView(Context context) {
             super(context);
-            laCarte = BitmapFactory.decodeResource(getResources(),R.drawable.zoo); //charge l'image
-            Log.d("zoo", "view constructor");
+            Log.d("aquarium","view constructor");
+            laCarte = BitmapFactory.decodeResource(getResources(),R.drawable.aquarium); //charge l'image
         }
 
         @Override
         protected void onDraw(Canvas canvas) {
-            Log.d("zoo", "draw");
+            Log.d("aquarium","onDraw");
             canvas.drawBitmap(laCarte,0,0,null); //affiche l'image
 
         }

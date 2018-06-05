@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -14,35 +13,35 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
-public class ZooMapActivity extends Activity{
+public class PopCornActivity extends Activity{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(new ZooMapActivityView(this)); //lance la vue
+        this.setContentView(new PopCornActivityView(this)); //lance la vue
         Log.i("zoo: ", "o,Create");
 
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        //launch aquarium activity
-        if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
-            Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this, AquariumActivity.class);
-            startActivity(i);
-            Log.d("zoo", "touch");
-        }
-        return true;
-    }
+//    @Override
+//    public boolean onTouchEvent(MotionEvent event) {
+//        //launch aquarium activity
+//        if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
+//            Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
+//            Intent i = new Intent(this, AquariumActivity.class);
+//            startActivity(i);
+//            Log.d("zoo", "touch");
+//        }
+//        return true;
+//    }
 
-    public class ZooMapActivityView extends View{
+    public class PopCornActivityView extends View{
 
         Bitmap laCarte;
 
-        public ZooMapActivityView(Context context) {
+        public PopCornActivityView(Context context) {
             super(context);
-            laCarte = BitmapFactory.decodeResource(getResources(),R.drawable.zoo); //charge l'image
+            laCarte = BitmapFactory.decodeResource(getResources(),R.drawable.popcorn); //charge l'image
             Log.d("zoo", "view constructor");
         }
 
