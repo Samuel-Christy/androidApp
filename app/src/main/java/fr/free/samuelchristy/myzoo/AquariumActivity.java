@@ -30,7 +30,9 @@ public class AquariumActivity extends Activity{
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
 
             Log.d("aquarium", "touch");
-            startActivity(new Intent(this, PopCornActivity.class));
+            Intent i = new Intent(this, PopCornActivity.class);
+            i.putExtra("msg","pas de popcorn aux poissons !");
+            startActivity(i);
         }
         return true;
     }
