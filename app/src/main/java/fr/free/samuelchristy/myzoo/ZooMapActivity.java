@@ -30,6 +30,7 @@ public class ZooMapActivity extends Activity{
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
             Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(this, AquariumActivity.class);
+//            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
             Log.d("zoo", "touch");
         }

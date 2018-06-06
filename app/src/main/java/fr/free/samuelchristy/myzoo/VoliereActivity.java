@@ -37,11 +37,13 @@ public class VoliereActivity extends Activity{
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
 
 //            Log.d("aquarium", "touch");
             Intent i = new Intent(this, PopCornActivity.class);
             i.putExtra(PopCornActivity.MESSAGE_KEY,"pas de popcorn aux wazos !");
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
         }
         return true;

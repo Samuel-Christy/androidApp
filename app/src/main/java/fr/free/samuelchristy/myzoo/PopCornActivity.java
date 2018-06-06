@@ -42,6 +42,7 @@ public class PopCornActivity extends Activity{
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
 //        Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
         Intent i = new Intent(this, VoliereActivity.class);
+
 //        startActivity(i);
         startActivityForResult(i,0);
         Log.d("zoo", "touch");

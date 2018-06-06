@@ -17,6 +17,7 @@ public class AquariumActivity extends Activity{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         this.setContentView(new AquariumMapActivityView(this)); //lance la vue
@@ -31,6 +32,7 @@ public class AquariumActivity extends Activity{
 
             Log.d("aquarium", "touch");
             Intent i = new Intent(this, PopCornActivity.class);
+//            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             i.putExtra(PopCornActivity.MESSAGE_KEY,"pas de popcorn aux poissons !");
             startActivity(i);
         }
