@@ -33,7 +33,7 @@ public class AquariumActivity extends Activity{
             Log.d("aquarium", "touch");
             Intent i = new Intent(this, PopCornActivity.class);
 //            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            i.putExtra(PopCornActivity.MESSAGE_KEY,"pas de popcorn aux poissons !");
+            i.putExtra(PopCornActivity.MESSAGE_KEY,"pas de icopopcorn aux poissons !");
             startActivity(i);
         }
         return true;

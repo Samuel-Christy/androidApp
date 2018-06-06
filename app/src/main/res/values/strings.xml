@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyZoo</string>
+    <string name="activity_title_zoo">Carte du zoo</string>
+    <string name="activity_title_aquarium">Carte de l\'aquarium</string>
+    <string name="activity_title_popcorn">Stand à popcorn</string>
+    <string name="activity_title_voliere">C\'est pas moi qui ai tué le chat</string>
 </resources>

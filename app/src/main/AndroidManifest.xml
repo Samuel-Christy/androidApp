@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="fr.free.samuelchristy.myzoo">
 
     <application
@@ -6,26 +7,25 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
-        <activity android:name=".ZooMapActivity" >
+        android:supportsRtl="true"
+        >
+        <activity android:name=".ZooMapActivity" android:label="@string/activity_title_zoo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AquariumActivity">
+        <activity android:name=".AquariumActivity"  android:label="@string/activity_title_aquarium">
+            <!--<intent-filter><icon> </icon></intent-filter>-->
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.VIEW" />-->
                 <!--<category android:name="android.intent.category.TAB" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".PopCornActivity">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.VIEW" />-->
-            <!--<category android:name="android.intent.category.TAB" />-->
-            <!--</intent-filter>-->
+        <activity android:name=".PopCornActivity" android:label="@string/activity_title_popcorn">
+
         </activity>
-        <activity android:name=".VoliereActivity">
+        <activity android:name=".VoliereActivity" android:label="@string/activity_title_voliere">
             <!--<intent-filter>-->
             <!--<action android:name="android.intent.action.VIEW" />-->
             <!--<category android:name="android.intent.category.TAB" />-->

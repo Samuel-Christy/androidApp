@@ -5,13 +5,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Camera;
 import android.graphics.Canvas;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
+
+import java.time.Instant;
 
 public class VoliereActivity extends Activity{
 
@@ -23,12 +27,13 @@ public class VoliereActivity extends Activity{
         this.setContentView(new VoliereActivityView(this)); //lance la vue
         Log.i("zoo: ", "onCreate");
         Toast.makeText(this,getIntent().getStringExtra(PopCornActivity.MESSAGE_KEY),Toast.LENGTH_LONG).show();
+
     }
 
     @Override
     public void onBackPressed() {
         Intent i = new Intent();
-        i.putExtra(PopCornActivity.MESSAGE_KEY,"les piafs non plus ne mangent pas de popcorn"); //si objet, doit implementer / hériter interface Parcelable ou Bundle
+        i.putExtra(PopCornActivity.MESSAGE_KEY,"les piafs non plus ne mangent pas de icopopcorn"); //si objet, doit implementer / hériter interface Parcelable ou Bundle
         this.setResult(0,i);
 
         super.onBackPressed();
@@ -38,13 +43,20 @@ public class VoliereActivity extends Activity{
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
+        Log.d("touch x",""+event.getX());
+        Log.d("touch y",""+event.getY());
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
 
-//            Log.d("aquarium", "touch");
+            if(event.getX()<100 && event.getY()<200){
+                Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivity(i);
+            }
+            else{
             Intent i = new Intent(this, PopCornActivity.class);
-            i.putExtra(PopCornActivity.MESSAGE_KEY,"pas de popcorn aux wazos !");
+            i.putExtra(PopCornActivity.MESSAGE_KEY,"pas de icopopcorn aux wazos !");
             i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
+            }
         }
         return true;
     }
