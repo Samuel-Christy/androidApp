@@ -21,7 +21,7 @@ public class AquariumActivity extends Activity{
 
         this.setContentView(new AquariumMapActivityView(this)); //lance la vue
         Log.i("onCreate: ", "killRoy was here !");
-        Toast.makeText(this, "kapoué 2!", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "kapoué 2!", Toast.LENGTH_SHORT).show();
         Log.d("aquarium","oncreate");
     }
 
@@ -31,7 +31,7 @@ public class AquariumActivity extends Activity{
 
             Log.d("aquarium", "touch");
             Intent i = new Intent(this, PopCornActivity.class);
-            i.putExtra("msg","pas de popcorn aux poissons !");
+            i.putExtra(PopCornActivity.MESSAGE_KEY,"pas de popcorn aux poissons !");
             startActivity(i);
         }
         return true;
@@ -41,18 +41,23 @@ public class AquariumActivity extends Activity{
 
     public class AquariumMapActivityView extends View{
 
-        Bitmap laCarte;
+        Bitmap laCarte,lacarte2;
+
 
         public AquariumMapActivityView(Context context) {
             super(context);
             Log.d("aquarium","view constructor");
             laCarte = BitmapFactory.decodeResource(getResources(),R.drawable.aquarium); //charge l'image
+
+
         }
 
         @Override
         protected void onDraw(Canvas canvas) {
             Log.d("aquarium","onDraw");
+
             canvas.drawBitmap(laCarte,0,0,null); //affiche l'image
+
 
         }
     }

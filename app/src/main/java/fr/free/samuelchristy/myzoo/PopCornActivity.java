@@ -15,25 +15,35 @@ import android.widget.Toast;
 
 public class PopCornActivity extends Activity{
 
+    public static final String MESSAGE_KEY = "msg";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(new PopCornActivityView(this)); //lance la vue
         Log.i("zoo: ", "onCreate");
-        Toast.makeText(this,getIntent().getStringExtra("msg"),Toast.LENGTH_LONG).show();
+        Toast.makeText(this,getIntent().getStringExtra(MESSAGE_KEY),Toast.LENGTH_LONG).show();
 
     }
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+
+
+        super.onActivityResult(requestCode, resultCode, data);
+        Toast.makeText(this,data.getStringExtra(MESSAGE_KEY),Toast.LENGTH_LONG).show();
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         //launch aquarium activity
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
-        Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
         Intent i = new Intent(this, VoliereActivity.class);
-        startActivity(i);
+//        startActivity(i);
+        startActivityForResult(i,0);
         Log.d("zoo", "touch");
         }
         return true;
