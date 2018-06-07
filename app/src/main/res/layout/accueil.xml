@@ -22,5 +22,19 @@
         android:id="@+id/accueil_textView_news"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="@string/accueil_textView_news" />
+        android:text="@string/accueil_textView_news" />
+
+    <Button
+        android:id="@+id/accueil_button_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/accueil_btn_map_label" />
+
+    <Button
+        android:id="@+id/accueil_button_alertActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/accueil_btn_alert_label" />
 </LinearLayout>

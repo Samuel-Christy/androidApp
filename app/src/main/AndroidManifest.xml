@@ -2,6 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="fr.free.samuelchristy.myzoo">
 
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +13,8 @@
         android:supportsRtl="true"
         >
 
-        <!--main activity-->
+
+        main activity
         <activity android:name=".AccueilActivity" android:label="@string/activity_title_accueil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,9 +22,18 @@
             </intent-filter>
         </activity>
 
-
+        <!--<activity android:name=".SmsReader" android:label="@string/app_name">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
 
         <!--extra activities-->
+        <activity
+            android:name=".AlertActivity"
+            android:label="@string/activity_title_alert" />
+
         <activity
             android:name=".ZooMapActivity"
             android:label="@string/activity_title_zoo" />
