@@ -29,17 +29,25 @@
         android:layout_height="wrap_content"
         android:text="@string/accueil_textView_news" />
 
-    <Button
-        android:id="@+id/accueil_button_map"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        android:text="@string/accueil_btn_map_label" />
+        <Button
+            android:id="@+id/accueil_button_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <Button
-        android:id="@+id/accueil_button_alertActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/accueil_btn_map_label" />
 
-        android:text="@string/accueil_btn_alert_label" />
+        <Button
+            android:id="@+id/accueil_button_alertActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:text="@string/accueil_btn_alert_label" />
+    </LinearLayout>
 </LinearLayout>

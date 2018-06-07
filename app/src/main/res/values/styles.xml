@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="myZoo">
+        <item name="android:textColor">#AAAAAA</item>
+    </style>
+
+</resources>
