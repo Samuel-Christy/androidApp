@@ -7,4 +7,7 @@
     <string name="activity_title_voliere">C\'est pas moi qui ai tué le chat</string>
     <string name="toast_fish_popcorn_warning">pas de popcorn aux %1$s</string>
     <string name="toast_birds_popcorn">pas de popcorn aux oiseaux non plus</string>
+    <string name="accueil_textview_title">un titre</string>
+    <string name="accueil_textview_infos">Le pangolin est un mammifère édenté d\'Afrique et d\'Asie, une bête éminemment pacifique. De ma vie, je n\'ai jamais eu à me plaindre d\'un pangolin. Il mesure un mètre. Sa femelle s\'appelle la pangoline. Elle ne donne le jour qu\'à un seul petit à la fois, qui s\'appelle Toto. Le pangolin ressemble à un artichaut à l\'envers prolongé d\'une queue à la vue de laquelle on se prend à penser que le ridicule ne tue plus. Pour plus d\'informations sur le pangolin, n\'appelez surtout pas le +33652449834.</string>
+    <string name="accueil_textView_news">news !!!</string>
 </resources>
