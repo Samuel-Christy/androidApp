@@ -13,4 +13,9 @@
     <string name="accueil_textView_news">news !!!</string>
     <string name="accueil_btn_map_label">Carte</string>
     <string name="accueil_btn_alert_label">Alerte</string>
+    <string name="alert_urgent_cb">est urgent ?</string>
+    <string name="alerte_titre_label">Titre de l\'alerte</string>
+    <string name="alerte_lieu_label">lieu :</string>
+    <string name="alerte_description_label">Description :</string>
+    <string name="alert_button_submit">Envoyer</string>
 </resources>

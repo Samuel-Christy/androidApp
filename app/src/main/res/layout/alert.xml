@@ -4,4 +4,56 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/alerte_titre_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alerte_titre_label" />
+
+    <EditText
+        android:id="@+id/alert_titre_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/alerte_lieu_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alerte_lieu_label" />
+
+    <EditText
+        android:id="@+id/alerte_lieur_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/alerte_description_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alerte_description_label" />
+
+    <EditText
+        android:id="@+id/alerte_description_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <CheckBox
+        android:id="@+id/alerte_urgent_cb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alert_urgent_cb" />
+
+    <Button
+        android:id="@+id/alerte_button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnonClick"
+        android:text="@string/alert_button_submit" />
 </LinearLayout>
