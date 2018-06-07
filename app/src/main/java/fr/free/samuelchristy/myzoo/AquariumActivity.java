@@ -38,11 +38,6 @@ public class AquariumActivity extends Activity{
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
-
-
-
-
-
             Log.d("aquarium", "touch");
             Intent i = new Intent(this, PopCornActivity.class);
 //            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -56,7 +51,7 @@ public class AquariumActivity extends Activity{
 
     public class AquariumMapActivityView extends View{
 
-        Bitmap laCarte,lacarte2;
+        Bitmap laCarte;
 
 
         public AquariumMapActivityView(Context context) {
