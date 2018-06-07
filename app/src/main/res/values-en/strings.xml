@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyZoo</string>
+    <string name="activity_title_zoo">Global map</string>
+    <string name="activity_title_aquarium">Aquarium\'s map</string>
+    <string name="activity_title_popcorn">Popcorn stand</string>
+    <string name="activity_title_voliere">Aviary</string>
+    <string name="toast_birds_popcorn">chickens rulez</string>
+    <string name="toast_fish_popcorn_warning">Do not feed the %1$s with popcorn</string>
+</resources>

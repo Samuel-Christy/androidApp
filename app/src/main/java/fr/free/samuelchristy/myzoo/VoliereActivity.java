@@ -33,7 +33,7 @@ public class VoliereActivity extends Activity{
     @Override
     public void onBackPressed() {
         Intent i = new Intent();
-        i.putExtra(PopCornActivity.MESSAGE_KEY,"les piafs non plus ne mangent pas de icopopcorn"); //si objet, doit implementer / hériter interface Parcelable ou Bundle
+        i.putExtra(PopCornActivity.MESSAGE_KEY,getString(R.string.toast_birds_popcorn)); //si objet, doit implementer / hériter interface Parcelable ou Bundle
         this.setResult(0,i);
 
         super.onBackPressed();
@@ -53,7 +53,7 @@ public class VoliereActivity extends Activity{
             }
             else{
             Intent i = new Intent(this, PopCornActivity.class);
-            i.putExtra(PopCornActivity.MESSAGE_KEY,"pas de icopopcorn aux wazos !");
+            i.putExtra(PopCornActivity.MESSAGE_KEY,getString( R.string.toast_birds_popcorn));
             i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
             }

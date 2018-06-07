@@ -13,7 +13,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class AquariumActivity extends Activity{
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,14 +30,23 @@ public class AquariumActivity extends Activity{
         Log.d("aquarium","oncreate");
     }
 
+    private String randomFish(){
+        String[] fishes  = getResources().getStringArray(R.array.fishes);
+        return fishes[new Random().nextInt(fishes.length)];
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
 
+
+
+
+
             Log.d("aquarium", "touch");
             Intent i = new Intent(this, PopCornActivity.class);
 //            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            i.putExtra(PopCornActivity.MESSAGE_KEY,"pas de icopopcorn aux poissons !");
+            i.putExtra(PopCornActivity.MESSAGE_KEY,getString(R.string.toast_fish_popcorn_warning,randomFish()));
             startActivity(i);
         }
         return true;

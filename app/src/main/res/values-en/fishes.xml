@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="fishes">
+        <item>mackerels</item>
+        <item>sardines</item>
+        <item>morays</item>
+        <item>roaches</item>
+        <item>trout</item>
+        <item>sharks</item>
+        <item>whales</item>
+    </string-array>
+
+</resources>

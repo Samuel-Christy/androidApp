@@ -4,4 +4,6 @@
     <string name="activity_title_aquarium">Carte de l\'aquarium</string>
     <string name="activity_title_popcorn">Stand à popcorn</string>
     <string name="activity_title_voliere">C\'est pas moi qui ai tué le chat</string>
+    <string name="toast_fish_popcorn_warning">pas de popcorn aux %1$s</string>
+    <string name="toast_birds_popcorn">pas de popcorn aux oiseaux non plus</string>
 </resources>

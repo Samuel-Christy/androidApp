@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="fishes">
+        <item>maquereau</item>
+        <item>sardines</item>
+        <item>murènes</item>
+        <item>gardons</item>
+        <item>truites</item>
+        <item>requins</item>
+        <item>baleines</item>
+    </string-array>
+
+</resources>

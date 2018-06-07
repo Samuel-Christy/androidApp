@@ -28,7 +28,7 @@ public class ZooMapActivity extends Activity{
     public boolean onTouchEvent(MotionEvent event) {
         //launch aquarium activity
         if(event.getActionMasked()==MotionEvent.ACTION_DOWN) {
-            Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "pouet !", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(this, AquariumActivity.class);
 //            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
