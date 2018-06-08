@@ -9,10 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MyActivity extends Activity {
+public abstract class MyActivity extends Activity {
 
-    public static final String MY_APP_PREFERENCES = "zoo", MY_APP_PREFERENCES_KEY_ALERT = "alert";
-    public static final String MESSAGE_KEY = "msg";
+    public static final String
+            MY_APP_PREFERENCES = "zoo",
+            MY_APP_PREFERENCES_KEY_ALERT = "alert",
+            MESSAGE_KEY = "msg";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
