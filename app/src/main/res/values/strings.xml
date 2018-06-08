@@ -18,4 +18,6 @@
     <string name="alerte_lieu_label">lieu :</string>
     <string name="alerte_description_label">Description :</string>
     <string name="alert_button_submit">Envoyer</string>
+    <string name="menuOptionButton">Paramètres</string>
+    <string name="menuOptionSubMenuAlertsButton">Alertes</string>
 </resources>

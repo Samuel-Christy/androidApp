@@ -11,11 +11,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/myZoo"
+
         >
+        <!--android:theme="@style/myZoo"-->
 
-
-        main activity
+        <!--main activity-->
         <activity android:name=".AccueilActivity" android:label="@string/activity_title_accueil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

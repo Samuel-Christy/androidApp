@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menuHomeButton"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/activity_title_zoo"
+        tools:ignore="AppCompatResource" />
+    <item
+        android:id="@+id/menuOptionButton"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/menuOptionButton"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menuOptionSubMenuAlertsButton"
+                android:checkable="true"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:showAsAction="ifRoom"
+                android:title="@string/menuOptionSubMenuAlertsButton"
+                tools:ignore="AppCompatResource" />
+        </menu>
+    </item>
+
+
+</menu>
