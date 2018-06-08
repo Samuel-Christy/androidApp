@@ -1,6 +1,5 @@
 package fr.free.samuelchristy.myzoo;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,19 +10,18 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
-public class PopCornActivity extends Activity{
+public class PopCornActivity extends MyActivity {
 
-    public static final String MESSAGE_KEY = "msg";
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(new PopCornActivityView(this)); //lance la vue
         Log.i("zoo: ", "onCreate");
-        Toast.makeText(this,getIntent().getStringExtra(MESSAGE_KEY),Toast.LENGTH_LONG).show();
 
+        toast(getIntent().getStringExtra(MESSAGE_KEY));
     }
 
 
@@ -33,7 +31,8 @@ public class PopCornActivity extends Activity{
 
 
         super.onActivityResult(requestCode, resultCode, data);
-        Toast.makeText(this,data.getStringExtra(MESSAGE_KEY),Toast.LENGTH_LONG).show();
+
+        toast(data.getStringExtra(MESSAGE_KEY));
     }
 
     @Override

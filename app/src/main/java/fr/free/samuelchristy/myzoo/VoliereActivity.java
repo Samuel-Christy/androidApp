@@ -1,11 +1,9 @@
 package fr.free.samuelchristy.myzoo;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Camera;
 import android.graphics.Canvas;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -13,11 +11,8 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
-import java.time.Instant;
-
-public class VoliereActivity extends Activity{
+public class VoliereActivity extends MyActivity {
 
 
 
@@ -26,8 +21,10 @@ public class VoliereActivity extends Activity{
         super.onCreate(savedInstanceState);
         this.setContentView(new VoliereActivityView(this)); //lance la vue
         Log.i("zoo: ", "onCreate");
-        Toast.makeText(this,getIntent().getStringExtra(PopCornActivity.MESSAGE_KEY),Toast.LENGTH_LONG).show();
-
+//        if(getSharedPreferences(AccueilActivity.MY_APP_PREFERENCES, Activity.MODE_PRIVATE)
+//                .getBoolean(AccueilActivity.MY_APP_PREFERENCES_KEY_ALERT, false)) {
+//        Toast.makeText(this,getIntent().getStringExtra(PopCornActivity.MESSAGE_KEY),Toast.LENGTH_LONG).show();}
+        toast(getIntent().getStringExtra(PopCornActivity.MESSAGE_KEY));
     }
 
     @Override

@@ -1,6 +1,5 @@
 package fr.free.samuelchristy.myzoo;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,11 +10,10 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.Random;
 
-public class AquariumActivity extends Activity{
+public class AquariumActivity extends MyActivity {
 
 
 
